@@ -13,7 +13,7 @@ public class Bankaccount {
 		this(0,id);
 	}
 
-	Bankaccount(double balance, int id){
+	public Bankaccount(double balance, int id){
 		this.sum = balance;
 		this.id = id;
 	}
