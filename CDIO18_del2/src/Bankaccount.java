@@ -14,5 +14,7 @@ public class Bankaccount {
 	public void addSum(int x) {
 		this.sum = sum + x;
 	}
+	
+	
 
 }
