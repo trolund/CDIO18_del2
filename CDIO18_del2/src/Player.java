@@ -1,11 +1,9 @@
 
 public class Player {
 	
-	Boolean Playerturn;
+	private Boolean Playerturn;
 	
 	
-	
-
 	public Boolean getPlayerturn() {
 		return Playerturn;
 	}
