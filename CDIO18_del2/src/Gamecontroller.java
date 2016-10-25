@@ -24,7 +24,7 @@ public class Gamecontroller {
 		fields[4] = new Street.Builder().setTitle("Felt 4").setRent("600,-").build();
 		fields[5] = new Street.Builder().setTitle("Felt 5").setRent("600,-").build();
 		fields[6] = new Street.Builder().setTitle("Felt 6").setRent("600,-").build();
-		fields[7] = new Street.Builder().setTitle("Felt 7").setRent("600,-").build();
+		fields[7] = new Street.Builder().setTitle("Felt 7").setRent("600,-").setSubText("du er bare god").build();
 		GUI.create(fields);
 		
 		Car car1 = new Car.Builder()
