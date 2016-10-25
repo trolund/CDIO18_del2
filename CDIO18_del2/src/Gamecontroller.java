@@ -8,12 +8,11 @@ import desktop_resources.GUI;
 public class Gamecontroller {
 
 	
-	
 	public static void main(String[] args) {
 		
 		
 		// opsætning af spille plade med spillere
-		Player player1 = new Player(true,1,3000,0);
+		Player player1 = new Player(true,1,3000,200);
 		Player player2 = new Player(false,2,3000,0);
 		
 		Field[] fields = new Field[8];
@@ -41,12 +40,13 @@ public class Gamecontroller {
 				.secondaryColor(Color.red)
 				.build();
 		
-		GUI.addPlayer("Player1", (int) player1.account.getSum(),car1);
-		GUI.addPlayer("Player2", (int) player2.account.getSum(),car2);
+		GUI.addPlayer("Player1",0,car1);
+		GUI.addPlayer("Player2",0,car2);
+	
 		
+		// Test
 		
-		// eks på sæt terning
-		
+		System.out.println(player1.account.getSum());
 		GUI.setDice(3, 4);
 	}
 

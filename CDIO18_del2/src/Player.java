@@ -3,15 +3,12 @@ public class Player {
 	
 	private Boolean playerturn;
 	private int playerId;
-	private double maxSum;
-	private double startSum;
-	
+	BankAccount account;
 	
 	public Player(boolean playerturn, int playerId, double maxSum, double startSum) {
 		this.playerturn = playerturn;
 		this.playerId = playerId;
-		this.maxSum = maxSum;
-		this.startSum = startSum;
+		account = new BankAccount(startSum,playerId,maxSum);
 	}
 	
 	
@@ -32,6 +29,5 @@ public class Player {
 		this.playerId = playerId;
 	}
 
-	BankAccount account  = new BankAccount(startSum,playerId,maxSum);
 	
 }
