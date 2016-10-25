@@ -1,10 +1,19 @@
 
 public class Dicecup {
 
-Die d1 = new Die();
-Die d2 = new Die();
+	Die die1 = new Die();
+	Die die2 = new Die();
 
-int SumOfDice = d1.roll() + d2.roll(); 
+	public int getSum(){
+		return (int) die1.roll() + die2.roll(); 
 
-	
+	}
+
+	public void specialCase(Die x, Die y){
+
+		if(x.equals(y)){
+			
+		}
+		
+	}
 }
