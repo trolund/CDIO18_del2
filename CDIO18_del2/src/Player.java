@@ -3,22 +3,16 @@ public class Player {
 	
 	private Boolean playerturn;
 	private int playerId;
+	private int bankid;
+	private double maxSum;
 	
-	Player(){
-		this(false,0);
-	}
+	BankAccount account  = new BankAccount(0,bankid,maxSum);
 	
-	Player(boolean playerturn){
-		this(playerturn,0);
-	}
-	
-	Player(int id){
-		this(false,id);
-	}
-	
-	public Player(boolean playerturn, int playerId) {
+	public Player(boolean playerturn, int playerId, int bankid, double maxSum) {
 		this.playerturn = playerturn;
 		this.playerId = playerId;
+		this.bankid = bankid;
+		this.maxSum = maxSum;
 	}
 	
 	
