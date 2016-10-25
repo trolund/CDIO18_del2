@@ -5,7 +5,7 @@ public class BankAccount {
 	private int bankId;
 	private double maxSum;
 
-	public BankAccount(double balance, int id, double maxSum){
+	public BankAccount(double balance){
 		sum = balance;
 		bankId = id;
 		this.maxSum = maxSum;
