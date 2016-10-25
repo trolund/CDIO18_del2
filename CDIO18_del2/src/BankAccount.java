@@ -36,7 +36,7 @@ public class BankAccount {
 	}
 
 	public boolean isEmpty(){
-		if(sum == 0){
+		if(sum <= 0){
 			return true;
 		}
 		else 
