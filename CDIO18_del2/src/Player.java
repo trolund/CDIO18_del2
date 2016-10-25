@@ -8,7 +8,7 @@ public class Player {
 	public Player(boolean playerturn, int playerId, double maxSum, double startSum) {
 		this.playerturn = playerturn;
 		this.playerId = playerId;
-		account = new BankAccount(startSum,playerId,maxSum);
+		account = new BankAccount(startSum);
 	}
 	
 	

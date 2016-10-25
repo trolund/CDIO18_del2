@@ -7,8 +7,6 @@ public class BankAccount {
 
 	public BankAccount(double balance){
 		sum = balance;
-		bankId = id;
-		this.maxSum = maxSum;
 	}
 
 	public double getSum() {
