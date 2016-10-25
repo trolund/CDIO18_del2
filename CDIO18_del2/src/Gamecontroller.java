@@ -47,6 +47,7 @@ public class Gamecontroller {
 		// Test
 		
 		System.out.println(player1.account.getSum());
+		
 		GUI.setDice(3, 4);
 	}
 
