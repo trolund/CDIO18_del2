@@ -2,12 +2,12 @@
 public class BankAccount {
 
 	private double sum;
-	private int id;
+	private int bankId;
 	private double maxSum;
 
 	public BankAccount(double balance, int id, double maxSum){
 		sum = balance;
-		this.id = id;
+		bankId = id;
 		this.maxSum = maxSum;
 	}
 
@@ -28,11 +28,11 @@ public class BankAccount {
 	}
 
 	public int getId() {
-		return id;
+		return bankId;
 	}
 
 	public void setId(int id) {
-		this.id = id;
+		bankId = id;
 	}
 
 	public boolean isEmpty(){
