@@ -1,11 +1,11 @@
 
 public class BankAccount {
 
-	private double sum;
+	private int sum;
 	private int bankId;
-	private double maxSum;
+	private int maxSum;
 
-	public BankAccount(double balance){
+	public BankAccount(int balance){
 		sum = balance;
 	}
 

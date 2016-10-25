@@ -5,12 +5,11 @@ public class Player {
 	private int playerId;
 	BankAccount account;
 	
-	public Player(boolean playerturn, int playerId, double maxSum, double startSum) {
+	public Player(boolean playerturn, int playerId, int startSum) {
 		this.playerturn = playerturn;
 		this.playerId = playerId;
 		account = new BankAccount(startSum);
-	}
-	
+	}	
 	
 	
 	public Boolean getPlayerturn() {
