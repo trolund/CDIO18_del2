@@ -1,3 +1,6 @@
+import java.awt.Color;
+
+import desktop_codebehind.Car;
 import desktop_fields.Field;
 import desktop_fields.Street;
 import desktop_resources.GUI;
@@ -24,8 +27,25 @@ public class Gamecontroller {
 		fields[7] = new Street.Builder().setTitle("Felt 7").setRent("600,-").build();
 		GUI.create(fields);
 		
-		GUI.addPlayer("Player1", (int) player1.account.getSum());
-		GUI.addPlayer("Player2", (int) player2.account.getSum());
+		Car car1 = new Car.Builder()
+				.typeTractor()
+				.patternHorizontalDualColor()
+				.primaryColor(Color.RED)
+				.secondaryColor(Color.BLUE)
+				.build();
+		
+		Car car2 = new Car.Builder()
+				.typeTractor()
+				.patternHorizontalDualColor()
+				.primaryColor(Color.BLACK)
+				.secondaryColor(Color.red)
+				.build();
+		
+		GUI.addPlayer("Player1", (int) player1.account.getSum(),car1);
+		GUI.addPlayer("Player2", (int) player2.account.getSum(),car2);
+		
+		
+		// eks på sæt terning
 		
 		GUI.setDice(3, 4);
 	}
