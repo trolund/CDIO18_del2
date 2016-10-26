@@ -5,8 +5,7 @@ public class Player {
 	private int playerId;
 	BankAccount account;
 	
-	public Player(boolean playerturn, int playerId, int startSum) {
-		this.playerturn = playerturn;
+	public Player(int playerId, int startSum) {
 		this.playerId = playerId;
 		account = new BankAccount(startSum);
 	}	

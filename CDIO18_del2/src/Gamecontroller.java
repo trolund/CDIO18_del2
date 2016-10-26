@@ -14,11 +14,9 @@ public class Gamecontroller {
 	}
 	
 	private void go(){
-		
-		
 		// opsætning af spille plade med spillere
-		Player player1 = new Player(true,1,3000,200);
-		Player player2 = new Player(false,2,3000,0);
+		Player player1 = new Player(1,0);
+		Player player2 = new Player(2,0);
 	
 		Dicecup cup = new Dicecup();
 
