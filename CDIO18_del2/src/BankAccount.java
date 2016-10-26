@@ -1,16 +1,16 @@
 
 public class BankAccount {
 
-	private int sum;
+	private int balance;
 	private int bankId;
 	private int maxSum;
 
 	public BankAccount(int balance){
-		sum = balance;
+		balance = balance;
 	}
 
-	public double getSum() {
-		return sum;
+	public int getSum() {
+		return balance;
 	}
 	
 	public String sumToString(){
@@ -18,11 +18,11 @@ public class BankAccount {
 	}
 
 	public void setSum(int sum) {
-		this.sum = sum;
+		this.balance = sum;
 	}
 
 	public void addSum(int x) {
-		this.sum += x;
+		this.balance += x;
 	}
 
 	public int getId() {
@@ -34,7 +34,7 @@ public class BankAccount {
 	}
 
 	public boolean isEmpty(){
-		if(sum <= 0){
+		if(balance <= 0){
 			return true;
 		}
 		else 
@@ -42,7 +42,7 @@ public class BankAccount {
 	}
 	
 	public boolean Full(){
-		if(maxSum < sum){
+		if(maxSum < balance){
 			return true;
 		}
 		else 

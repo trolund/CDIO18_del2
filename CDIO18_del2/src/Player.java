@@ -1,30 +1,32 @@
 
 public class Player {
 	
-	private Boolean playerturn;
-	private int playerId;
+	private String name;
 	BankAccount account;
 	
-	public Player(int playerId, int startSum) {
-		this.playerId = playerId;
-		account = new BankAccount(startSum);
+	public Player(int balance, String name) {
+		this.name = name;
+		account = new BankAccount(balance);
 	}	
 	
 	
-	public Boolean getPlayerturn() {
-		return playerturn;
+	public BankAccount getAccount() {
+		return account;
 	}
 
-	public void setPlayerturn(Boolean playerturn) {
-		this.playerturn = playerturn;
+
+	public void setAccount(BankAccount account) {
+		this.account = account;
 	}
 
-	public int getPlayerId() {
-		return playerId;
+
+	public String getName() {
+		return name;
 	}
 
-	public void setPlayerId(int playerId) {
-		this.playerId = playerId;
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	
