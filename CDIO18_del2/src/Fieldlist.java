@@ -1,7 +1,7 @@
 
 public class Fieldlist 
 {
-	private Field[] fieldList;
+	private Field[] fieldList = new Field[11];
 	
 	public Fieldlist()
 	{
