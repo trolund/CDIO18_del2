@@ -14,6 +14,7 @@ public class Gamecontroller {
 	private Player player1;
 	private Player player2;
 	private Dicecup cup;
+	private Fieldlist list;
 	
 	public static void main(String[] args) {
 		new Gamecontroller().go();
@@ -23,16 +24,17 @@ public class Gamecontroller {
 		cup = new Dicecup();
 		player1 = new Player(0,"Knud");
 		player2 = new Player(0,"Brian");
+		list = new Fieldlist();
 		
 		Field[] fields = new Field[8];
 		fields[0] = new Street.Builder().setTitle("Start").build();
-		fields[1] = new Street.Builder().setTitle("Felt 1").setRent("600,-").build();
-		fields[2] = new Street.Builder().setTitle("Felt 2").setRent("600,-").build();
-		fields[3] = new Street.Builder().setTitle("Felt 3").setRent("600,-").build();
-		fields[4] = new Street.Builder().setTitle("Felt 4").setRent("600,-").build();
-		fields[5] = new Street.Builder().setTitle("Felt 5").setRent("600,-").build();
-		fields[6] = new Street.Builder().setTitle("Felt 6").setRent("600,-").build();
-		fields[7] = new Street.Builder().setTitle("Felt 7").setRent("600,-").setSubText("du er bare god").build();
+		fields[1] = new Street.Builder().setTitle(list.fields[1].getName()).setRent(list.fields[1].getValue() +",-").build();
+		fields[2] = new Street.Builder().setTitle(list.fields[2].getName()).setRent(list.fields[2].getValue() +",-").build();
+		fields[3] = new Street.Builder().setTitle(list.fields[3].getName()).setRent(list.fields[3].getValue() +",-").build();
+		fields[4] = new Street.Builder().setTitle(list.fields[4].getName()).setRent(list.fields[4].getValue() +",-").build();
+		fields[5] = new Street.Builder().setTitle(list.fields[5].getName()).setRent(list.fields[5].getValue() +",-").build();
+		fields[6] = new Street.Builder().setTitle(list.fields[6].getName()).setRent(list.fields[6].getValue() +",-").build();
+		fields[7] = new Street.Builder().setTitle(list.fields[7].getName()).setRent(list.fields[7].getValue() +",-").build();
 		GUI.create(fields);
 
 		Car car1 = new Car.Builder()
@@ -76,29 +78,33 @@ public class Gamecontroller {
 		 switch (cup.getSum()) {
 
 		 case 2: 
-			 GUI.showMessage("du er bare god du slog 2");
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[1].getDescription());
+			 p.account.addSum(list.fields[1].getValue());
 			 
 		 break;
 		 case 3:
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[2].getDescription());
+			 p.account.addSum(list.fields[2].getValue());
 		 break;
 		 case 4:
-			 GUI.showMessage("du er bare god du slog 4");
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[3].getDescription());
+			 p.account.addSum(list.fields[3].getValue());
 		 break;
 		 case 5: 
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[4].getDescription());
+			 p.account.addSum(list.fields[4].getValue());
 		 break;
 		 case 6: 
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[5].getDescription());
+			 p.account.addSum(list.fields[5].getValue());
 		 break;
 		 case 7:  
-			 GUI.showMessage("du er bare god du slog 7");
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[6].getDescription());
+			 p.account.addSum(list.fields[6].getValue());
 		 break;
 		 case 8: 
-			 p.account.addSum(600);
+			 GUI.showMessage(list.fields[7].getDescription());
+			 p.account.addSum(list.fields[7].getValue());
 		 break;
 		 case 9:  
 			 p.account.addSum(600);
