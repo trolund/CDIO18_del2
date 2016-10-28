@@ -62,10 +62,11 @@ public class Gamecontroller {
 	public void update(){
 		System.out.println("update køre");
 		while(true){
-			GUI.showMessage("Player 1 tur.");
+			
 			turn(player1);
-			GUI.showMessage("Player 2 tur.");
+			GUI.showMessage("Player 1 tur.");
 			turn(player2);
+			GUI.showMessage("Player 2 tur.");
 			}
 	}
 	
