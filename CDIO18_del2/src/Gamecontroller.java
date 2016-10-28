@@ -35,6 +35,7 @@ public class Gamecontroller {
 		fields[5] = new Street.Builder().setTitle(list.fields[5].getName()).setRent(list.fields[5].getValue() +",-").build();
 		fields[6] = new Street.Builder().setTitle(list.fields[6].getName()).setRent(list.fields[6].getValue() +",-").build();
 		fields[7] = new Street.Builder().setTitle(list.fields[7].getName()).setRent(list.fields[7].getValue() +",-").build();
+		
 		GUI.create(fields);
 
 		Car car1 = new Car.Builder()
@@ -55,7 +56,7 @@ public class Gamecontroller {
 		GUI.addPlayer(player2.getName(), player2.account.getSum(),car2);
 		
 		System.out.println("setup done");
-		
+	
 		update();
 	}
 	
