@@ -58,6 +58,7 @@ public class Gamecontroller {
 	}
 	
 	public void update(){
+		System.out.println("update køre");
 		while(true){
 			GUI.showMessage("Player 1 tur.");
 			turn(player1);
@@ -75,12 +76,15 @@ public class Gamecontroller {
 		 switch (cup.getSum()) {
 
 		 case 2: 
+			 GUI.showMessage("du er bare god du slog 2");
 			 p.account.addSum(600);
+			 
 		 break;
 		 case 3:
 			 p.account.addSum(600);
 		 break;
 		 case 4:
+			 GUI.showMessage("du er bare god du slog 4");
 			 p.account.addSum(600);
 		 break;
 		 case 5: 
@@ -90,6 +94,7 @@ public class Gamecontroller {
 			 p.account.addSum(600);
 		 break;
 		 case 7:  
+			 GUI.showMessage("du er bare god du slog 7");
 			 p.account.addSum(600);
 		 break;
 		 case 8: 
