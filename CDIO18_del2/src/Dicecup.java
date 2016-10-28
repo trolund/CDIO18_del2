@@ -9,11 +9,11 @@ public class Dicecup {
 
 	}
 
-	public void specialCase(Die x, Die y){
-
-		if(x.equals(y)){
-			
-		}
-		
-	}
+//	public void specialCase(Die x, Die y){
+//
+//		if(x.equals(y)){
+//
+//		}
+//	}
+	
 }
