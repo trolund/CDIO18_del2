@@ -23,7 +23,7 @@ public class Gamecontroller {
 	public void go(){	
 		cup = new Dicecup();
 		player1 = new Player(0,"Knud");
-		player2 = new Player(0,"Brian");
+		player2 = new Player(0,"Mille");
 		list = new Fieldlist();
 		
 		Field[] fields = new Field[8];
@@ -62,12 +62,12 @@ public class Gamecontroller {
 	public void update(){
 		System.out.println("update køre");
 		while(true){
-			
+			GUI.showMessage(player1.getName() + "`s turn.");
 			turn(player1);
-			GUI.showMessage("Player 1 tur.");
+			GUI.showMessage(player2.getName() + "`s turn.");
 			turn(player2);
-			GUI.showMessage("Player 2 tur.");
 			}
+		
 	}
 	
 	private void turn(Player p){
@@ -75,7 +75,8 @@ public class Gamecontroller {
 		cup.die1.roll();
 		cup.die2.roll();
 		
-		
+		 GUI.setDice(cup.die1.getValue(), cup.die2.getValue());
+		 
 		 switch (cup.getSum()) {
 
 		 case 2: 
@@ -125,7 +126,7 @@ public class Gamecontroller {
 
      }	
 		 GUI.setBalance(p.getName(), p.account.getSum());
-		 GUI.setDice(cup.die1.getValue(), cup.die2.getValue());
+		
 		
 	}
 
