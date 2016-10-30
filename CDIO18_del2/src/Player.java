@@ -14,12 +14,6 @@ public class Player {
 		return account;
 	}
 
-
-	public void setAccount(BankAccount account) {
-		this.account = account;
-	}
-
-
 	public String getName() {
 		return name;
 	}

@@ -6,11 +6,10 @@ import desktop_fields.Street;
 
  public class  Fieldlist 
 {
-	public Field[] fields = new Field[11];
+	public Field[] fields = new Field[12];
 
 	public Fieldlist()
 	{
-		
 		fields[0] = new Field(250, "Tower", "You have found a mysterious tower and chest lays inside, you've gained 250 gold");
 		fields[1] = new Field(-100, "Crater", "You have found a big crater, you must spend 100 gold to fill it out");
 		fields[2] = new Field(100, "Palace gates", "You stand in front of some big palace gates, might be usefull, you get a 100 gold");
