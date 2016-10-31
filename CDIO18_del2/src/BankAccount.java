@@ -1,16 +1,14 @@
 
 public class BankAccount {
 
-	private int sum;
-	private int bankId;
-	private int maxSum;
+	private int balance;
 
 	public BankAccount(int balance){
-		sum = balance;
+		this.balance = balance;
 	}
 
-	public double getSum() {
-		return sum;
+	public int getSum() {
+		return balance;
 	}
 	
 	public String sumToString(){
@@ -18,37 +16,11 @@ public class BankAccount {
 	}
 
 	public void setSum(int sum) {
-		this.sum = sum;
+		this.balance = sum;
 	}
 
 	public void addSum(int x) {
-		this.sum += x;
-	}
-
-	public int getId() {
-		return bankId;
-	}
-
-	public void setId(int id) {
-		bankId = id;
-	}
-
-	public boolean isEmpty(){
-		if(sum <= 0){
-			return true;
-		}
-		else 
-		return false;
-	}
-	
-	public boolean Full(){
-		if(maxSum < sum){
-			return true;
-		}
-		else 
-		return false;
-	}
-	
-	
+		this.balance += x;
+	}	
 
 }
