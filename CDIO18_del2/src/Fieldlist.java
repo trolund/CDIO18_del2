@@ -22,4 +22,8 @@ public class Fieldlist
 	{
 		return fieldList[index];
 	}
+	public Field[] getFields() 
+	{ 
+		return fieldList; 
+	}
 }
