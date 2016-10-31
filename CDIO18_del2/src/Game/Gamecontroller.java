@@ -11,8 +11,8 @@ import desktop_resources.GUI;
 public class Gamecontroller {
 
 
-	private Player player1;
 	private Player player2;
+	private Player player1;
 	private Dicecup cup;
 	private Fieldlist list;
 	private int maxSum = 3000;
@@ -23,23 +23,23 @@ public class Gamecontroller {
 
 	public void go(){	
 		cup = new Dicecup();
-		player1 = new Player(0,"Knud");
-		player2 = new Player(0,"Mille");
+		player2 = new Player(0,"Bijan");
+		player1 = new Player(0,"GangsterJohn");
 		list = new Fieldlist();
 
 		Field[] fields = new Field[11];
 
-		fields[0] = new Street.Builder().setTitle(list.fields[0].getName()).setRent(list.fields[0].getValue() +",-").build();
-		fields[1] = new Street.Builder().setTitle(list.fields[1].getName()).setRent(list.fields[1].getValue() +",-").build();
-		fields[2] = new Street.Builder().setTitle(list.fields[2].getName()).setRent(list.fields[2].getValue() +",-").build();
-		fields[3] = new Street.Builder().setTitle(list.fields[3].getName()).setRent(list.fields[3].getValue() +",-").build();
-		fields[4] = new Street.Builder().setTitle(list.fields[4].getName()).setRent(list.fields[4].getValue() +",-").build();
-		fields[5] = new Street.Builder().setTitle(list.fields[5].getName()).setRent(list.fields[5].getValue() +",-").build();
-		fields[6] = new Street.Builder().setTitle(list.fields[6].getName()).setRent(list.fields[6].getValue() +",-").build();
-		fields[7] = new Street.Builder().setTitle(list.fields[7].getName()).setRent(list.fields[7].getValue() +",-").build();
-		fields[8] = new Street.Builder().setTitle(list.fields[8].getName()).setRent(list.fields[8].getValue() +",-").build();
-		fields[9] = new Street.Builder().setTitle(list.fields[9].getName()).setRent(list.fields[9].getValue() +",-").build();
-		fields[10] = new Street.Builder().setTitle(list.fields[10].getName()).setRent(list.fields[10].getValue() +",-").build();
+		fields[0] = new Street.Builder().setBgColor(new Color (0,191,255)).setTitle(list.fields[0].getName()).setRent(list.fields[0].getValue() +",-").setDescription(list.fields[0].getDescription()).setSubText("2").build();
+		fields[1] = new Street.Builder().setBgColor(new Color (0,0,0)).setFgColor(new Color (250,250,250)).setTitle(list.fields[1].getName()).setRent(list.fields[1].getValue() +",-").setDescription(list.fields[1].getDescription()).setSubText("3").build();
+		fields[2] = new Street.Builder().setBgColor(new Color (255,140,0)).setTitle(list.fields[2].getName()).setRent(list.fields[2].getValue() +",-").setDescription(list.fields[2].getDescription()).setSubText("4").build();
+		fields[3] = new Street.Builder().setBgColor(new Color (250,250,250)).setTitle(list.fields[3].getName()).setRent(list.fields[3].getValue() +",-").setDescription(list.fields[3].getDescription()).setSubText("5").build();
+		fields[4] = new Street.Builder().setBgColor(new Color (0,0,255)).setFgColor(new Color (250,250,250)).setTitle(list.fields[4].getName()).setRent(list.fields[4].getValue() +",-").setDescription(list.fields[4].getDescription()).setSubText("6").build();
+		fields[5] = new Street.Builder().setBgColor(new Color (255,20,147)).setTitle(list.fields[5].getName()).setRent(list.fields[5].getValue() +",-").setDescription(list.fields[5].getDescription()).setSubText("7").build();
+		fields[6] = new Street.Builder().setBgColor(new Color (0,0,0)).setFgColor(new Color (250,250,250)).setTitle(list.fields[6].getName()).setRent(list.fields[6].getValue() +",-").setDescription(list.fields[6].getDescription()).setSubText("8").build();
+		fields[7] = new Street.Builder().setBgColor(new Color (255,69,0)).setTitle(list.fields[7].getName()).setRent(list.fields[7].getValue() +",-").setDescription(list.fields[7].getDescription()).setSubText("9").build();
+		fields[8] = new Street.Builder().setBgColor(new Color (0)).setFgColor(new Color (250,250,250)).setTitle(list.fields[8].getName()).setRent(list.fields[8].getValue() +",-").setDescription(list.fields[8].getDescription()).setSubText("10").build();
+		fields[9] = new Street.Builder().setBgColor(new Color (0,0,0)).setFgColor(new Color (250,250,250)).setTitle(list.fields[9].getName()).setRent(list.fields[9].getValue() +",-").setDescription(list.fields[9].getDescription()).setSubText("11").build();
+		fields[10] = new Street.Builder().setBgColor(new Color (255,215,0)).setTitle(list.fields[10].getName()).setRent(list.fields[10].getValue() +",-").setDescription(list.fields[10].getDescription()).setSubText("12").build();
 
 
 		GUI.create(fields);
@@ -58,8 +58,8 @@ public class Gamecontroller {
 				.secondaryColor(Color.RED)
 				.build();
 
-		GUI.addPlayer(player1.getName(), player1.account.getSum(),car1);
-		GUI.addPlayer(player2.getName(), player2.account.getSum(),car2);
+		GUI.addPlayer(player2.getName(), player2.account.getSum(),car1);
+		GUI.addPlayer(player1.getName(), player1.account.getSum(),car2);
 
 		System.out.println("setup done");
 
@@ -69,14 +69,14 @@ public class Gamecontroller {
 	public void update(){
 		System.out.println("update køre");
 		while(true){
-			GUI.showMessage(player1.getName() + "`s turn.");
-			turn(player1);
-			winner(player1);
-
-
 			GUI.showMessage(player2.getName() + "`s turn.");
 			turn(player2);
 			winner(player2);
+
+
+			GUI.showMessage(player1.getName() + "`s turn.");
+			turn(player1);
+			winner(player1);
 		}
 
 	}
@@ -86,8 +86,8 @@ public class Gamecontroller {
 			GUI.showMessage(p.getName() + " vandt dette spil!");
 
 			GUI.showMessage("Lyst til et spil mere?");
-			player1.account.setSum(0);
 			player2.account.setSum(0);
+			player1.account.setSum(0);
 			GUI.close();
 		}
 	}
@@ -163,6 +163,7 @@ public class Gamecontroller {
 			p.account.addSum(list.fields[7].getValue());
 
 			System.out.println("flyttet til felt: " + 8);
+
 			break;
 		case 10: 
 			GUI.setCar(9,p.getName());
@@ -170,6 +171,8 @@ public class Gamecontroller {
 			p.account.addSum(list.fields[8].getValue());
 
 			System.out.println("flyttet til felt: " + 9);
+			GUI.showMessage("Sygt shit bro, du får en extra tur");
+			turn(p);
 			break;
 		case 11:
 			GUI.setCar(10,p.getName());
