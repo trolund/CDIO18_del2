@@ -169,7 +169,7 @@ public class Gamecontroller {
 			p.account.addSum(list[8].getValue());
 
 			System.out.println("flyttet til felt: " + 9);
-			GUI.showMessage("Sygt shit bro, du får en extra tur");
+			GUI.showMessage("Sick shit bro, you got an extra turn!");
 			turn(p);
 			break;
 		case 11:
