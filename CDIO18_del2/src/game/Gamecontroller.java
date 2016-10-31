@@ -97,8 +97,8 @@ public class Gamecontroller {
 		cup.die1.roll();
 		cup.die2.roll();
 
-		System.out.println(cup.die1.roll());
-		System.out.println(cup.die2.roll());
+		System.out.println(cup.die1.getValue());
+		System.out.println(cup.die2.getValue());
 
 		GUI.setDice(cup.die1.getValue(), cup.die2.getValue());
 
@@ -169,7 +169,7 @@ public class Gamecontroller {
 			p.account.addSum(list[8].getValue());
 
 			System.out.println("flyttet til felt: " + 9);
-			GUI.showMessage("Sygt shit bro, du får en extra tur");
+			GUI.showMessage("Sick bro! You got an extra turn! Yippie :D");
 			turn(p);
 			break;
 		case 11:
