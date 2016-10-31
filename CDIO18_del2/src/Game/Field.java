@@ -1,3 +1,4 @@
+package Game;
 public class Field 
 {
 	private int value = 0;
