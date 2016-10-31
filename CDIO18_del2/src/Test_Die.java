@@ -3,7 +3,10 @@ import static org.junit.Assert.*;
 public class Test_Die {
 
 	@org.junit.Test
-	public void dieTest() {
+
+	@Test
+	public void dieTest() 
+	{
 
 		Die die1 = new Die();
 
@@ -16,11 +19,8 @@ public class Test_Die {
 
 		for(int i = 0; i <= 10000; i++)
 		{
-
 			switch (die1.roll())
 			{
-
-
 			case 1:
 				c1++;
 				break;
