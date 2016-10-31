@@ -1,13 +1,8 @@
-package Game;
-
-
-import desktop_fields.Shipping;
-
-import desktop_fields.Street;
+package game;
 
  public class  Fieldlist 
 {
-	public Field[] fields = new Field[12];
+	private Field[] fields = new Field[12];
 
 	public Fieldlist()
 	{
@@ -24,9 +19,9 @@ import desktop_fields.Street;
 		fields[10] = new Field(650, "Goldmine", "You have found the goldmine, alot of shining gold awaits you! you gained 650 gold, you are rich!");
 	}
 	
-	public Field getField(int index)
+	public Field[] getFields()
 	{
-		return fields[index];
+		return fields;
 	}
 
 	
