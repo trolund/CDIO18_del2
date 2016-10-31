@@ -1,13 +1,10 @@
-package Game;
-
-
+package game;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
-public class JunitTest {
+public class JUnitTestPlayer {
 
 	@Test
 	public void testPLayer() {

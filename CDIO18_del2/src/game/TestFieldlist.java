@@ -5,18 +5,17 @@ import org.junit.Test;
 
 public class TestFieldlist 
 {
-
 	@Test
 	public void test01() 
 	{
 		int exsValue;
 		String exsName;
 		String exsDescription;
-		Fieldlist fdList = new Fieldlist();
+		Field[] fdList = new Fieldlist().getFields();
 		
-		exsValue = fdList.getField(0).getValue();
-		exsName = fdList.getField(0).getName();
-		exsDescription = fdList.getField(0).getDescription();
+		exsValue = fdList[0].getValue();
+		exsName = fdList[0].getName();
+		exsDescription = fdList[0].getDescription();
 
 		assertEquals(exsValue, 250);
 		assertEquals(exsName, "Tower");

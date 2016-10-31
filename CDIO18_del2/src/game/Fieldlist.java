@@ -19,10 +19,6 @@ public class Fieldlist
 		fieldList[10] = new Field(650, "Goldmine", "You have found the goldmine, alot of shining gold awaits you! you gained 650 gold, you are rich!");
 	}
 	
-	public Field getField(int index)
-	{
-		return fieldList[index];
-	}
 	public Field[] getFields() 
 	{ 
 		return fieldList; 

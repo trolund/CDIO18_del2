@@ -1,5 +1,4 @@
-package Game;
-import java.awt.Button;
+package game;
 
 import java.awt.Color;
 
@@ -14,7 +13,7 @@ public class Gamecontroller {
 	private Player player1;
 	private Player player2;
 	private Dicecup cup;
-	private Fieldlist list;
+	private game.Field[] list = new Fieldlist().getFields();
 	private int maxSum = 3000;
 
 	public static void main(String[] args) {
@@ -25,21 +24,20 @@ public class Gamecontroller {
 		cup = new Dicecup();
 		player1 = new Player(0,"Knud");
 		player2 = new Player(0,"Mille");
-		list = new Fieldlist();
 
 		Field[] fields = new Field[11];
 
-		fields[0] = new Street.Builder().setTitle(list.fields[0].getName()).setRent(list.fields[0].getValue() +",-").build();
-		fields[1] = new Street.Builder().setTitle(list.fields[1].getName()).setRent(list.fields[1].getValue() +",-").build();
-		fields[2] = new Street.Builder().setTitle(list.fields[2].getName()).setRent(list.fields[2].getValue() +",-").build();
-		fields[3] = new Street.Builder().setTitle(list.fields[3].getName()).setRent(list.fields[3].getValue() +",-").build();
-		fields[4] = new Street.Builder().setTitle(list.fields[4].getName()).setRent(list.fields[4].getValue() +",-").build();
-		fields[5] = new Street.Builder().setTitle(list.fields[5].getName()).setRent(list.fields[5].getValue() +",-").build();
-		fields[6] = new Street.Builder().setTitle(list.fields[6].getName()).setRent(list.fields[6].getValue() +",-").build();
-		fields[7] = new Street.Builder().setTitle(list.fields[7].getName()).setRent(list.fields[7].getValue() +",-").build();
-		fields[8] = new Street.Builder().setTitle(list.fields[8].getName()).setRent(list.fields[8].getValue() +",-").build();
-		fields[9] = new Street.Builder().setTitle(list.fields[9].getName()).setRent(list.fields[9].getValue() +",-").build();
-		fields[10] = new Street.Builder().setTitle(list.fields[10].getName()).setRent(list.fields[10].getValue() +",-").build();
+		fields[0] = new Street.Builder().setTitle(list[0].getName()).setRent(list[0].getValue() +",-").build();
+		fields[1] = new Street.Builder().setTitle(list[1].getName()).setRent(list[1].getValue() +",-").build();
+		fields[2] = new Street.Builder().setTitle(list[2].getName()).setRent(list[2].getValue() +",-").build();
+		fields[3] = new Street.Builder().setTitle(list[3].getName()).setRent(list[3].getValue() +",-").build();
+		fields[4] = new Street.Builder().setTitle(list[4].getName()).setRent(list[4].getValue() +",-").build();
+		fields[5] = new Street.Builder().setTitle(list[5].getName()).setRent(list[5].getValue() +",-").build();
+		fields[6] = new Street.Builder().setTitle(list[6].getName()).setRent(list[6].getValue() +",-").build();
+		fields[7] = new Street.Builder().setTitle(list[7].getName()).setRent(list[7].getValue() +",-").build();
+		fields[8] = new Street.Builder().setTitle(list[8].getName()).setRent(list[8].getValue() +",-").build();
+		fields[9] = new Street.Builder().setTitle(list[9].getName()).setRent(list[9].getValue() +",-").build();
+		fields[10] = new Street.Builder().setTitle(list[10].getName()).setRent(list[10].getValue() +",-").build();
 
 
 		GUI.create(fields);
@@ -109,79 +107,79 @@ public class Gamecontroller {
 
 		case 2: 
 			GUI.setCar(1,p.getName());
-			GUI.showMessage(list.fields[0].getDescription());
-			p.account.addSum(list.fields[0].getValue());
+			GUI.showMessage(list[0].getDescription());
+			p.account.addSum(list[0].getValue());
 
 			System.out.println("flyttet til felt: " + 1);
 			break;
 		case 3:
 			GUI.setCar(2,p.getName());
-			GUI.showMessage(list.fields[1].getDescription());
-			p.account.addSum(list.fields[1].getValue());
+			GUI.showMessage(list[1].getDescription());
+			p.account.addSum(list[1].getValue());
 
 			System.out.println("flyttet til felt: " + 2);
 
 			break;
 		case 4:
 			GUI.setCar(3,p.getName());
-			GUI.showMessage(list.fields[2].getDescription());
-			p.account.addSum(list.fields[2].getValue());
+			GUI.showMessage(list[2].getDescription());
+			p.account.addSum(list[2].getValue());
 
 			System.out.println("flyttet til felt: " + 3);
 			break;
 		case 5: 
 			GUI.setCar(5,p.getName());
-			GUI.showMessage(list.fields[3].getDescription());
-			p.account.addSum(list.fields[3].getValue());
+			GUI.showMessage(list[3].getDescription());
+			p.account.addSum(list[3].getValue());
 
 			System.out.println("flyttet til felt: " + 4);
 			break;
 		case 6: 
 			GUI.setCar(5,p.getName());
-			GUI.showMessage(list.fields[4].getDescription());
-			p.account.addSum(list.fields[4].getValue());
+			GUI.showMessage(list[4].getDescription());
+			p.account.addSum(list[4].getValue());
 
 			System.out.println("flyttet til felt: " + 5);
 			break;
 		case 7:  
 			GUI.setCar(6,p.getName());
-			GUI.showMessage(list.fields[5].getDescription());
-			p.account.addSum(list.fields[5].getValue());
+			GUI.showMessage(list[5].getDescription());
+			p.account.addSum(list[5].getValue());
 
 			System.out.println("flyttet til felt: " + 6);
 			break;
 		case 8: 
 			GUI.setCar(7,p.getName());
-			GUI.showMessage(list.fields[6].getDescription());
-			p.account.addSum(list.fields[6].getValue());
+			GUI.showMessage(list[6].getDescription());
+			p.account.addSum(list[6].getValue());
 
 			System.out.println("flyttet til felt: " + 7);
 			break;
 		case 9:  
 			GUI.setCar(8,p.getName());
-			GUI.showMessage(list.fields[7].getDescription());
-			p.account.addSum(list.fields[7].getValue());
+			GUI.showMessage(list[7].getDescription());
+			p.account.addSum(list[7].getValue());
 
 			System.out.println("flyttet til felt: " + 8);
 			break;
 		case 10: 
 			GUI.setCar(9,p.getName());
-			GUI.showMessage(list.fields[8].getDescription());
-			p.account.addSum(list.fields[8].getValue());
+			GUI.showMessage(list[8].getDescription());
+			p.account.addSum(list[8].getValue());
 
 			System.out.println("flyttet til felt: " + 9);
 			break;
 		case 11:
 			GUI.setCar(10,p.getName());
-			GUI.showMessage(list.fields[9].getDescription());
-			p.account.addSum(list.fields[9].getValue());
+			GUI.showMessage(list[9].getDescription());
+			p.account.addSum(list[9].getValue());
 
 			System.out.println("flyttet til felt: " + 10);
 			break;
 		case 12: 
 			GUI.setCar(11,p.getName());
-			GUI.showMessage(list.fields[10].getDescription());
-			p.account.addSum(list.fields[10].getValue());
+			GUI.showMessage(list[10].getDescription());
+			p.account.addSum(list[10].getValue());
 
 			System.out.println("flyttet til felt: " + 11);
 			break;
