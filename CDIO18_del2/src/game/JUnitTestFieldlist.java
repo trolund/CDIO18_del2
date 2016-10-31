@@ -3,7 +3,7 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-public class TestFieldlist 
+public class JUnitTestFieldlist 
 {
 	@Test
 	public void test01() 
