@@ -24,6 +24,8 @@ public class Gamecontroller {
 		cup = new Dicecup();
 		player2 = new Player(0,"Bijan");
 		player1 = new Player(0,"GangsterJohn");
+		player1.account.setSum(1000);
+		player2.account.setSum(1000);
 
 		Field[] fields = new Field[11];
 
@@ -84,8 +86,8 @@ public class Gamecontroller {
 			GUI.showMessage(p.getName() + " vandt dette spil!");
 
 			GUI.showMessage("Lyst til et spil mere?");
-			player2.account.setSum(0);
-			player1.account.setSum(0);
+			player2.account.setSum(1000);
+			player1.account.setSum(1000);
 			GUI.close();
 		}
 	}
