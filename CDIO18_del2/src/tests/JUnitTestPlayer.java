@@ -1,8 +1,10 @@
-package game;
+package tests;
 
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import game.Player;
 
 public class JUnitTestPlayer {
 

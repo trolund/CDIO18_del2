@@ -1,7 +1,10 @@
-package game;
+package tests;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+
+import game.Field;
+import game.Fieldlist;
 
 public class JUnitTestFieldlist 
 {
