@@ -12,20 +12,20 @@ public class JUnitTestPlayer {
 		Player p = new Player(1 ,"Knud");
 	
 		assertEquals("Knud", p.getName());
-		assertEquals(1, p.account.getSum());
+		assertEquals(1, p.getAccount().getSum());
 		
 		p.setName("Brian");
 		assertEquals("Brian", p.getName());
 		
-		p.account.setSum(0);
-		assertEquals(0, p.account.getSum());
+		p.getAccount().setSum(0);
+		assertEquals(0, p.getAccount().getSum());
 		
-		p.account.setSum(100);
-		p.account.addSum(200);
-		assertEquals(300, p.account.getSum());
+		p.getAccount().setSum(100);
+		p.getAccount().addSum(200);
+		assertEquals(300, p.getAccount().getSum());
 		
 		
-		assertEquals(p.account, p.getAccount());
+		assertEquals(p.getAccount(), p.getAccount());
 		
 		
 	}

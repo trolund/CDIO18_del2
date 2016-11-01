@@ -3,7 +3,7 @@ package game;
 public class Player {
 	
 	private String name;
-	BankAccount account;
+	private BankAccount account;
 	
 	public Player(int balance, String name) {
 		this.name = name;

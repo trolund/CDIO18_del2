@@ -55,8 +55,8 @@ public class Gamecontroller {
 				.secondaryColor(Color.RED)
 				.build();
 
-		GUI.addPlayer(player2.getName(), player2.account.getSum(),car1);
-		GUI.addPlayer(player1.getName(), player1.account.getSum(),car2);
+		GUI.addPlayer(player2.getName(), player2.getAccount().getSum(),car1);
+		GUI.addPlayer(player1.getName(), player1.getAccount().getSum(),car2);
 
 		System.out.println("setup done");
 
@@ -79,12 +79,12 @@ public class Gamecontroller {
 	}
 
 	private void winner(Player p){
-		if(p.account.getSum() >= maxSum){
+		if(p.getAccount().getSum() >= maxSum){
 			GUI.showMessage(p.getName() + " vandt dette spil!");
 
 			GUI.showMessage("Lyst til et spil mere?");
-			player2.account.setSum(1000);
-			player1.account.setSum(1000);
+			player2.getAccount().setSum(1000);
+			player1.getAccount().setSum(1000);
 			GUI.close();
 		}
 	}
@@ -107,14 +107,14 @@ public class Gamecontroller {
 		case 2: 
 			GUI.setCar(1,p.getName());
 			GUI.showMessage(list[0].getDescription());
-			p.account.addSum(list[0].getValue());
+			p.getAccount().addSum(list[0].getValue());
 
 			System.out.println("flyttet til felt: " + 1);
 			break;
 		case 3:
 			GUI.setCar(2,p.getName());
 			GUI.showMessage(list[1].getDescription());
-			p.account.addSum(list[1].getValue());
+			p.getAccount().addSum(list[1].getValue());
 
 			System.out.println("flyttet til felt: " + 2);
 
@@ -122,42 +122,42 @@ public class Gamecontroller {
 		case 4:
 			GUI.setCar(3,p.getName());
 			GUI.showMessage(list[2].getDescription());
-			p.account.addSum(list[2].getValue());
+			p.getAccount().addSum(list[2].getValue());
 
 			System.out.println("flyttet til felt: " + 3);
 			break;
 		case 5: 
 			GUI.setCar(5,p.getName());
 			GUI.showMessage(list[3].getDescription());
-			p.account.addSum(list[3].getValue());
+			p.getAccount().addSum(list[3].getValue());
 
 			System.out.println("flyttet til felt: " + 4);
 			break;
 		case 6: 
 			GUI.setCar(5,p.getName());
 			GUI.showMessage(list[4].getDescription());
-			p.account.addSum(list[4].getValue());
+			p.getAccount().addSum(list[4].getValue());
 
 			System.out.println("flyttet til felt: " + 5);
 			break;
 		case 7:  
 			GUI.setCar(6,p.getName());
 			GUI.showMessage(list[5].getDescription());
-			p.account.addSum(list[5].getValue());
+			p.getAccount().addSum(list[5].getValue());
 
 			System.out.println("flyttet til felt: " + 6);
 			break;
 		case 8: 
 			GUI.setCar(7,p.getName());
 			GUI.showMessage(list[6].getDescription());
-			p.account.addSum(list[6].getValue());
+			p.getAccount().addSum(list[6].getValue());
 
 			System.out.println("flyttet til felt: " + 7);
 			break;
 		case 9:  
 			GUI.setCar(8,p.getName());
 			GUI.showMessage(list[7].getDescription());
-			p.account.addSum(list[7].getValue());
+			p.getAccount().addSum(list[7].getValue());
 
 			System.out.println("flyttet til felt: " + 8);
 
@@ -165,7 +165,7 @@ public class Gamecontroller {
 		case 10: 
 			GUI.setCar(9,p.getName());
 			GUI.showMessage(list[8].getDescription());
-			p.account.addSum(list[8].getValue());
+			p.getAccount().addSum(list[8].getValue());
 
 			System.out.println("flyttet til felt: " + 9);
 			GUI.showMessage(p.getName() + ", You got an extra turn! Yippie :D");
@@ -174,14 +174,14 @@ public class Gamecontroller {
 		case 11:
 			GUI.setCar(10,p.getName());
 			GUI.showMessage(list[9].getDescription());
-			p.account.addSum(list[9].getValue());
+			p.getAccount().addSum(list[9].getValue());
 
 			System.out.println("flyttet til felt: " + 10);
 			break;
 		case 12: 
 			GUI.setCar(11,p.getName());
 			GUI.showMessage(list[10].getDescription());
-			p.account.addSum(list[10].getValue());
+			p.getAccount().addSum(list[10].getValue());
 
 			System.out.println("flyttet til felt: " + 11);
 			break;
@@ -190,7 +190,7 @@ public class Gamecontroller {
 			break;
 
 		}	
-		GUI.setBalance(p.getName(), p.account.getSum());
+		GUI.setBalance(p.getName(), p.getAccount().getSum());
 		System.out.println("værdi" + cup.getSum());
 	}
 
