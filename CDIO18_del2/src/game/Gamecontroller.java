@@ -168,7 +168,7 @@ public class Gamecontroller {
 			p.account.addSum(list[8].getValue());
 
 			System.out.println("flyttet til felt: " + 9);
-			GUI.showMessage("Sick bro! You got an extra turn! Yippie :D");
+			GUI.showMessage(p.getName() + ", You got an extra turn! Yippie :D");
 			turn(p);
 			break;
 		case 11:
