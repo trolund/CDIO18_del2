@@ -9,7 +9,6 @@ import desktop_resources.GUI;
 
 public class Gamecontroller {
 
-
 	private Player player2;
 	private Player player1;
 	private Dicecup cup;
@@ -20,12 +19,10 @@ public class Gamecontroller {
 		new Gamecontroller().go();
 	}
 
-	public void go(){	
+	public void go(){
 		cup = new Dicecup();
-		player2 = new Player(0,"Bijan");
-		player1 = new Player(0,"GangsterJohn");
-		player1.account.setSum(1000);
-		player2.account.setSum(1000);
+		player2 = new Player(1000,"Bijan");
+		player1 = new Player(1000,"GangsterJohn");
 
 		Field[] fields = new Field[11];
 
