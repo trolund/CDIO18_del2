@@ -9,14 +9,4 @@ public class Dicecup {
 		return die1.getValue() + die2.getValue(); 
 
 	}
-
-	public void specialCase(Die x, Die y){ 
-
-		if(x.equals(y)){
-			
-		}
-		
-		
-	}
-
 }
