@@ -5,7 +5,7 @@ public class BankAccount {
 	private int balance;
 
 	public BankAccount(int balance){
-		this.balance = balance;
+		this.balance = balance >= 0 ? balance : 0;
 	}
 
 	public int getSum() {
@@ -16,12 +16,31 @@ public class BankAccount {
 		return String.format("%1$2s %2$2s", getSum(), "kr");
 	}
 
-	public void setSum(int sum) {
-		this.balance = sum;
+	public Boolean setSum(int sum) {
+		balance =  sum >= 0 ? sum : 0;
+		return sum >=0 ? true : false; 
 	}
 
-	public void addSum(int x) {
-		this.balance += x;
+	public boolean addSum(int x) {
+		if(x > 0){
+		balance += x;
+		return true;
+		}
+		else {
+			return false;	
+		}	
 	}	
+	
+	
+	public boolean withdraw(int x) {
+		if(x > 0){
+		balance -= x;
+		return true;
+		}
+		else {
+			return false;	
+		}	
+	}
+	
 
 }
