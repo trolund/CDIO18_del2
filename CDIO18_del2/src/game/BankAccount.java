@@ -16,19 +16,12 @@ public class BankAccount {
 		return String.format("%1$2s %2$2s", getSum(), "kr");
 	}
 
-	public Boolean setSum(int sum) {
-		balance =  sum >= 0 ? sum : 0;
-		return sum >=0 ? true : false; 
+	public void setSum(int sum) {
+		balance =  sum;
 	}
 
-	public boolean addSum(int x) {
-		if(x > 0){
+	public void addSum(int x) {
 		balance += x;
-		return true;
-		}
-		else {
-			return false;	
-		}	
 	}	
 	
 	
