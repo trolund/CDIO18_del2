@@ -16,10 +16,10 @@ public class Gamecontroller {
 	private int maxSum = 3000;
 
 	public static void main(String[] args) {
-		new Gamecontroller().go();
+		new Gamecontroller().setup();
 	}
 
-	public void go(){
+	public void setup(){
 		cup = new Dicecup();
 		player2 = new Player(1000,"Spiller 1 - Mathias");
 		player1 = new Player(1000,"Spiller 2 - Ronni");
