@@ -21,8 +21,8 @@ public class Gamecontroller {
 
 	public void setup(){
 		cup = new Dicecup();
-		player2 = new Player(1000,"Spiller 1 - Mathias");
-		player1 = new Player(1000,"Spiller 2 - Ronni");
+		player2 = new Player(0,"Spiller 1 - Mathias");
+		player1 = new Player(0,"Spiller 2 - Ronni");
 
 		Field[] fields = new Field[11];
 
