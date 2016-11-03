@@ -17,7 +17,7 @@ public class BankAccount {
 	}
 
 	public void setSum(int sum) {
-		balance =  sum;
+		balance = sum >= 0 ? balance : 0;
 	}
 
 	public void addSum(int x) {
