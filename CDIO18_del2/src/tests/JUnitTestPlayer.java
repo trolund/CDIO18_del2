@@ -28,6 +28,12 @@ public class JUnitTestPlayer {
 		
 		assertEquals(p.getAccount(), p.getAccount());
 		
+		p.getAccount().addSum(-500);
+		assertEquals(0, p.getAccount().getSum());
+		
+		
+		
+		
 		
 		Player p2 = new Player(-21 ,"Brian");
 		

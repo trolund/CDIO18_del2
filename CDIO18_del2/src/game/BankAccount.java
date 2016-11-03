@@ -22,6 +22,10 @@ public class BankAccount {
 
 	public void addSum(int x) {
 		balance += x;
+		if (x < 0 && x * (-1) > balance)
+		balance = 0;
+			
+		
 	}	
 	
 	
