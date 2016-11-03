@@ -11,10 +11,10 @@ public class JUnitTestPlayer {
 	@Test
 	public void testPLayer() {
 		
-		Player p = new Player(1 ,"Knud");
+		Player p = new Player(50 ,"Knud");
 	
 		assertEquals("Knud", p.getName());
-		assertEquals(1, p.getAccount().getSum());
+		assertEquals(50, p.getAccount().getSum());
 		
 		p.setName("Brian");
 		assertEquals("Brian", p.getName());
